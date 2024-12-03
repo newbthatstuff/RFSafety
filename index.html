@@ -1,95 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Safety In RF Services</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety In RF Services - Home</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <div class="logo">SIRFS</div>
-        <nav>
-            <ul>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#differentiation">Differentiation</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <div class="content">
-        <!-- Main Title -->
-        <h1>Safety In RF Services</h1>
-        <h5>EST 2009</h5>
-
-        <!-- Services Section -->
-        <div id="services" class="services">
-            <h3>What Services we Deliver</h3>
-            <ul>
-                <li>Verifying existing macro sites Safety Code 6 Compliance
-                    <ul>
-                        <li>Using EMF-Visual as primary tool</li>
-                        <li>Working with existing EMF-Visual scenarios</li>
-                    </ul>
-                </li>
-                <li>Verifying new macro sites Safety Code 6 Compliance
-                    <ul>
-                        <li>Building new EMF-Visual scenarios</li>
-                    </ul>
-                </li>
-                <li>On demand GTA & Ontario site survey service
-                    <ul>
-                        <li>Augmenting Azimuth services</li>
-                        <li>Including EMF Dosimeter site check</li>
-                    </ul>
-                </li>
-                <li>Cell site interference analysis</li>
-            </ul>
-        </div>
-
-        <!-- Experience Section -->
-        <div id="experience" class="experience">
-            <h3>Experience</h3>
-            <ul>
-                <li>Six Years of SC6 Work for Rogers ending in August 2023
-                    <ul>
-                        <li>New site builds SC6 studies for Rogers Communications btw 2008-2011
-                            <ul>
-                                <li>Successfully introduced primed EMF Visual into Rogers as primary SC6 tool</li>
-                            </ul>
-                        </li>
-                        <li>SC6 studies for Rogers Communications 5G add btw 2021-present</li>
-                    </ul>
-                </li>
-                <li>Site interference studies for Rogers Communications btw 2008/11</li>
-                <li>Site survey SC6 compliance verification for Rogers Central (Manitoba, GTA & Ontario)</li>
-                <li>Safety Code 6 Analysis at Nortel Networks using IEEE tool starting in 2001. Nortel Carling View and other Toy-Test-Suites in Ottawa</li>
-                <li>Site surveys for Nortel Networks across Canada</li>
-            </ul>
-        </div>
-
-        <!-- Differentiation Section -->
-        <div id="differentiation" class="differentiation">
-            <h3>Differentiation</h3>
-            <ul>
-                <li>Unlike other engineering firms that perform various complex telecomm projects & services alongside Safety Code 6, we are focused solely on accurate SC6 and that is our specialty
-                    <ul>
-                        <li>Other players perform SC6 analysis on top of other telecomm services</li>
-                        <li>SC6 + accurate RF surveys is what we do</li>
-                    </ul>
-                </li>
-                <li>We are the market leader on SC6 pricing</li>
-            </ul>
-        </div>
-    </div>
+    <main class="content container">
+        <section class="hero">
+            <h1 class="hero-title">Safety In RF Services <span class="hero-subtitle">EST 2009</span></h1>
+        </section>
+        
+        <section class="about">
+            <div class="about-content">
+                <div class="logo-box">
+                    <img src="SRFLogo_R.png" alt="Safety In RF Services Logo" class="hero-logo">
+                </div>
+                <div class="text-content">
+                    <h3>Who We Are</h3>
+                    <p>Specialized in RF Safety (SC6-Canadian RF Safety Standard) Compliance and RF Site Surveys, we bring over two decades of RF Safety Expertise to Teleco Industry.</p>
+                    <h3>Our Services</h3>
+                    <p>We provide a range of services including SC6 analysis, EMF-Visual scenario development, site interference studies, and RF surveys.</p>
+                    <h3>Our Experience</h3>
+                    <p>We have a proven track record with major telecom providers, ensuring accurate P.Eng. Stamp RF Safety Compliance and RF site surveys.</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2024 Safety In RF Services. All rights reserved.</p>
-        <p>Contact: info@safetyinrfservices.com | Phone: (123) 456-7890</p>
+        <div class="container">
+            <p>© 2024 Safety In RF Services. All rights reserved.</p>
+            <p>Contact: sc6@safetyinrf.com | Phone: (647) 248-8489</p>
+        </div>
     </footer>
-
-    <a href="#" class="back-to-top">↑</a>
 </body>
 </html>

@@ -1,167 +1,247 @@
-/* Base styles */
-body {
-    font-family: 'Roboto', Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #6c757d;
+    --background-light: #f5f5f5;
+    --text-dark: #333;
+    --text-light: #6c757d;
+    --border-color: #dee2e6;
+    --white: #ffffff;
+    --content-max-width: 1200px;
 }
 
-/* Header and Navigation */
-header {
-    background-color: #3498db;
-    color: #ffffff;
-    padding: 1rem;
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
+    display: flex;
+    justify-content: center; /* Center the navigation */
+    align-items: center;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+header .container {
+    display: flex;
+    justify-content: center; /* Center the navigation */
+    align-items: center;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
     display: flex;
-}
-
-nav ul li {
-    margin-left: 1rem;
+    gap: 1rem;
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: var(--white);
     text-decoration: none;
     transition: color 0.3s ease;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--white);
+    transition: width 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #f1c40f;
+    color: rgba(255, 255, 255, 0.8);
 }
 
-/* Main content */
+nav ul li a:hover::after {
+    width: 100%;
+}
+
 .content {
-    max-width: 1000px;
-    margin: 2rem auto;
+    padding: 2rem 0;
+    flex: 1;
+    width: 100%;
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+}
+
+.hero {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.hero-title {
+    color: var(--white);
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    color: var(--white);
+}
+
+.about, .services, .experience, .service-details, .experience-details, .differentiation {
+    background-color: var(--white);
     padding: 2rem;
-    background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/* Typography */
-h1, h3, h5 {
-    color: #2c3e50;
+.about-content, .experience-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-box {
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2rem;
+    flex-shrink: 0;
+}
+
+.hero-logo {
+    max-width: 300px;
+    height: auto;
+}
+
+.services-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.services-logo {
+    width: 400px;
+    height: 300px;
+    border: 5px solid var(--primary-color);
+    border-radius: 15px;
+}
+
+.experience-logo {
+    max-width: 170px; /* Smaller size for experience.html */
+    height: auto;
+    border: 5px solid var(--primary-color);
+    border-radius: 15px;
+}
+
+.text-content {
+    flex: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+h1, h3 {
+    color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
 h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 0;
-    color: #3498db;
-}
-
-h5 {
-    font-size: 1rem;
+    font-size: 2rem;
     margin-top: 0;
-    color: #7f8c8d;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 h3 {
-    font-size: 1.8rem;
-    margin-top: 2rem;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 0.5rem;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
 }
 
-/* List styling */
-ul {
-    padding-left: 1.5rem;
-}
-
-li {
-    margin-bottom: 0.75rem;
-}
-
-/* Sections */
-.services, .experience, .differentiation {
-    margin-top: 2rem;
-}
-
-/* Nested lists */
-ul ul {
-    margin-top: 0.5rem;
-}
-
-/* Hover effect for list items */
-li:hover {
-    transform: translateX(5px);
-    transition: transform 0.3s ease;
-}
-
-/* Footer */
 footer {
-    background-color: #34495e;
-    color: #ffffff;
+    background-color: var(--primary-color);
+    color: var(--white);
     text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+    padding: 1rem 0;
+    width: 100%;
+    margin-top: auto;
 }
 
-/* Back to top button */
-.back-to-top {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    background-color: #3498db;
-    color: #ffffff;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    border-radius: 50%;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.back-to-top:hover {
-    background-color: #2980b9;
-}
-
-/* Responsive design */
 @media (max-width: 768px) {
-    header {
+    header .container {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center; /* Center the navigation */
     }
 
     nav ul {
         margin-top: 1rem;
+        flex-direction: column;
     }
 
     nav ul li {
-        margin-left: 0;
-        margin-right: 1rem;
+        margin-bottom: 0.5rem;
     }
 
     .content {
         padding: 1rem;
     }
 
-    h1 {
-        font-size: 2rem;
+    .hero-title {
+        font-size: 1.5rem;
     }
 
-    h3 {
-        font-size: 1.5rem;
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .about-content, .experience-content, .services-content {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .logo-box {
+        margin-bottom: 1rem;
+        margin-right: 0;
+    }
+
+    .hero-logo {
+        max-width: 200px;
+    }
+
+    .services-logo {
+        width: 300px;
+        height: 225px;
+    }
+
+    .experience-logo {
+        max-width: 100px; /* Smaller size for smaller screens */
     }
 }
